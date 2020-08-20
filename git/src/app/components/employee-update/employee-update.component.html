@@ -1,0 +1,17 @@
+<form (submit)="onUpdate()">
+  <table border="1" style="border-collapse: collapse;">
+    <tr>
+      <td>Name</td>
+      <td><input type="text" [(ngModel)]="name" name="name" /></td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td><input type="text" [(ngModel)]="age" name="age" /></td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td><input type="text" [(ngModel)]="salary" name="salary" /></td>
+    </tr>
+    <input type="submit" value="Update Empoyee" />
+  </table>
+</form>

@@ -1,0 +1,26 @@
+<button type="button" routerLink="/create">Create Employee</button>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Salary</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.employee_name }}</td>
+      <td>{{ emp.employee_age }}</td>
+      <td>{{ emp.employee_salary }}</td>
+      <td>
+        <img [src]="emp.profile_image" [alt]="emp.employee_name">
+      </td>
+      <td><a [routerLink]="'/update/' + emp.id">Update</a></td>
+      <td><button (click)="onDelete(emp.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<canvas #myChart width="400" height="400"></canvas>
